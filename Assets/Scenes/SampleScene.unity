@@ -206,8 +206,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
-  m_fontSizeBase: 38
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -348,6 +348,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &554485356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1951521229264346781, guid: 6978958e749177142963453562359208, type: 3}
+  m_PrefabInstance: {fileID: 1768996364261216635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &640236348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1951521229264346781, guid: 6978958e749177142963453562359208, type: 3}
+  m_PrefabInstance: {fileID: 785237885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &785237885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1073,6 +1083,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1474934783320177187, guid: 6978958e749177142963453562359208, type: 3}
   m_PrefabInstance: {fileID: 1721542012}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1722501752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1951521229264346781, guid: 6978958e749177142963453562359208, type: 3}
+  m_PrefabInstance: {fileID: 1196897345}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1856759637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,8 +1279,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4249e6f3d09de34687a7e18232f04cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: {fileID: 11400000, guid: df062f6ebd9e5b643aed16e581f8de5e, type: 2}
-  questionText: {fileID: 158388964}
+  questionSO: {fileID: 11400000, guid: df062f6ebd9e5b643aed16e581f8de5e, type: 2}
+  questionTextMeshGUI: {fileID: 158388964}
+  answerButtons:
+  - {fileID: 554485356}
+  - {fileID: 640236348}
+  - {fileID: 1722501752}
+  - {fileID: 1991957488}
+--- !u!1 &1991957488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1951521229264346781, guid: 6978958e749177142963453562359208, type: 3}
+  m_PrefabInstance: {fileID: 1721542012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2004551024
 GameObject:
   m_ObjectHideFlags: 0

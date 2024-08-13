@@ -1,19 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // TextMeshPro package
+using TMPro;
+using Unity.Collections; // TextMeshPro package
 
 public class Quiz : MonoBehaviour
 {
     [SerializeField]
-    QuestionSO question;
+    QuestionSO questionSO;
 
     // vs TextMeshPro which is for text in the Game itself (Not GUI)
     [SerializeField]
-    TextMeshProUGUI questionText;
+    TextMeshProUGUI questionTextMeshGUI;
+
+    [SerializeField]
+    GameObject[] answerButtons;
 
     void Start()
     {
-        questionText.text = question.GetQuestion();
+        questionTextMeshGUI.text = questionSO.GetQuestion();
+
+        for (int i = 0; i < answerButtons.Length; i++)
+        {
+            TextMeshProUGUI buttonTextTextMeshGUI = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            buttonTextTextMeshGUI.text = questionSO.GetAnswer(i);
+        }
     }
 }
