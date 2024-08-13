@@ -1,0 +1,11 @@
+# VS Code
+.vscode
+
+# Unity Generated
+/Logs
+/Library
+/obj
+/UserSettings
+/Temp
+/*.csproj
+/*.sln
