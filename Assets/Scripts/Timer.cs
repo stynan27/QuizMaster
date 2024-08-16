@@ -5,6 +5,8 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public bool isAnsweringQuestion = false;
+    public float fillFraction;
+    public bool canLoadNextQuestion = true;
 
     [SerializeField] float timeToCompleteQuestion = 30f;
     [SerializeField] float timeToShowCorrectAnswer = 10f;
@@ -13,6 +15,11 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         UpdateTimer();
+    }
+
+    public void CancelTimer()
+    {
+        timerValue = 0;
     }
 
     void UpdateTimer()
@@ -30,9 +37,24 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 isAnsweringQuestion = true;
                 timerValue = timeToCompleteQuestion;
+                canLoadNextQuestion = true;
+            }
+        }
+        else // timerValue > 0
+        {
+
+            if (isAnsweringQuestion)
+            {
+                fillFraction = timerValue / timeToCompleteQuestion;
+            }
+            else
+            {
+                fillFraction = timerValue / timeToShowCorrectAnswer;
             }
         }
 
-        Debug.Log(timerValue);
+        Debug.Log("isAnsweringQuestion: " + isAnsweringQuestion +
+            " w/t timerValue: " + timerValue +
+            " has fraction: " + fillFraction);
     }
 }
