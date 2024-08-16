@@ -20,4 +20,4 @@ MonoBehaviour:
   - Object.find(name)
   - FindObjByTypezz()
   - Update()
-  correctAnswerIndex: 0
+  correctAnswerIndex: 1

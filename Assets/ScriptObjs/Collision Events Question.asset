@@ -21,4 +21,4 @@ MonoBehaviour:
   - CircleCollider
   - Particle Emitter
   - Rigidbody
-  correctAnswerIndex: 0
+  correctAnswerIndex: 1
